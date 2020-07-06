@@ -1,0 +1,11 @@
+name: Gradient
+main: io.github.karlatemp.gradient.GradientBukkit
+version: "1.0"
+
+permissions:
+  "gradient.command":
+     default: op
+
+commands:
+  gradient:
+    permission: gradient.command
