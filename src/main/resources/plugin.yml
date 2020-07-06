@@ -1,6 +1,8 @@
 name: Gradient
 main: io.github.karlatemp.gradient.GradientBukkit
 version: "1.0"
+author: Karlatemp
+
 
 permissions:
   "gradient.command":
