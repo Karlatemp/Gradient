@@ -1,9 +1,11 @@
+import java.util.function.Predicate
+
 plugins {
     id 'java'
 }
 
 group 'io.github.karlatemp'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenLocal()
@@ -18,3 +20,15 @@ dependencies {
     compile group: 'org.jetbrains', name: 'annotations', version: '19.0.0'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+
+({
+    def file = new File("G:/KarlatempRepo/mkpom.gradle")
+    if (file.isFile()) {
+        apply from: file
+    }
+    project.extensions.add("pomFilter", ((Predicate<Dependency>) { d ->
+        true
+    }))
+}).call()
+
